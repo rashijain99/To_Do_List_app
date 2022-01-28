@@ -1,0 +1,18 @@
+{% extends 'base/main.html' %}
+{% block content %}
+    <div class="container">
+        <div class="row">
+          <div class="col-sm-8">
+            <h3><i class="fas fa-book-open"></i> Task Details </h3>
+          </div>
+          <div class="col-sm-4">
+            <button type="button" class="btn btn-light"> <a href = "{% url 'task-list'%}"> <i class="fas fa-arrow-circle-left"></i> To Do List</a> </button>
+          </div>
+        </div>
+    </div>
+    <br>
+    Task Name = {{task_d.title}} <br>
+    Task Description = {{task_d.description}} <br>
+    Task Completion = {{task_d.complete}} <br>
+    Date of Creation of Task = {{task_d.create}}
+{% endblock content %}
